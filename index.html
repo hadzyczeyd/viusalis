@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="VISUALIS - Digital Services">
+    <meta name="description" content="VISUALIS - Digital Services Business Card Design, Custom business cards, Modern business cards, Creative card design, Luxury business cards, Minimalist business cards, Digital business cards, Unique card layouts, Flyer Design, Custom flyer design, Promotional flyers, Event flyer design, Creative flyers, Print-ready flyers, Business marketing flyers, Eye-catching flyer templates, Video Editing, Professional video editing, Corporate video editing, Social media videos, YouTube video editing, Promo video creation, Wedding video editing, Color grading services, Motion graphics">
+    <meta name="keywords" content="Business Card Design, Custom business cards, Modern business cards, Creative card design, Luxury business cards, Minimalist business cards, Digital business cards, Unique card layouts, Flyer Design, Custom flyer design, Promotional flyers, Event flyer design, Creative flyers, Print-ready flyers, Business marketing flyers, Eye-catching flyer templates, Video Editing, Professional video editing, Corporate video editing, Social media videos, YouTube video editing, Promo video creation, Wedding video editing, Color grading services, Motion graphics">
+    <meta name="robots" content="noindex, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="synergydesign.io">
+
+
+
+
+    <title>VISUALIS Digital Services</title>
+
+
+    <link rel="icon" type="image/x-icon" href="LOGO VISUAL.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCW48PD471"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DCW48PD471');
+</script>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(45deg, #1b1b1b, #09203f, #05877d);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        .logo{
+            font-family: 'Montserrat';
+            color: #FFC107 ;
+            text-shadow: 0px 0px 13px rgba(255,193,7,1);
+            font-weight: bold;
+        }
+
+        .logo-nav{
+          font-family: 'Montserrat';
+            color: #FFC107 ;
+            font-weight: bold;
+        }
+
+        .title{
+            font-family: 'Montserrat';
+            color: white;
+            font-weight: 400;
+        }
+
+        .btn{
+            font-weight: 600;
+        }
+
+        .text{
+            font-family: 'Special Elite', sans-serif;
+            color: white;
+        }
+       
+        .cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        #gallery{
+            overflow: hidden;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+  .dropdown:focus-within .dropdown-menu {
+    /* @apply block; */
+    display:block;
+  }
+    </style>
+
+</head>
+<body>
+    
+    <nav x-data="{ open: false, langOpen: false }" class="bg-[#1b1b1d] text-white top-0 left-0 z-50 flex items-center justify-between p-4 fixed w-full">
+      <a class="flex items-center justify-center gap-2 flex-row" href="https://visualis-digitalservices.com/">
+        <div class="md:w-12 w-8"><img src="LOGO VISUAL.png" alt=""></div>
+        <div class="md:text-2xl text-xl font-bold logo-nav cursor-pointer">VISUALIS</div>
+      </a>
+      
+      <!-- Hamburger menu button -->
+      <button @click="open = !open" class="md:hidden cursor-pointer text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+  
+      <!-- Navigation links -->
+      <div :class="{'hidden': !open, 'flex': open}" class="md:flex md:items-center md:static absolute top-full left-0 w-full md:w-auto bg-[#1b1b1d] md:bg-transparent flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
+          <a href="#hero" class="relative text-lg md:text-xl font-medium before:bg-[#FFC107] before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">Home</a>
+          <a data-i18n="cntct-btn" href="#kontakt" class="relative text-lg md:text-xl font-medium before:bg-[#FFC107] before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100"></a>
+      </div>
+  
+      <!-- Language dropdown -->
+      
+      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-[#1b1b1b] bg-white hover:bg-[#FFC107] transition-colors cursor-pointer font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Language <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+        </svg>
+        </button>
+        
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="z-10 hidden text-left bg-white divide-y divide-[#FFC107] rounded-lg shadow-sm w-44">
+            <ul class="py-2 text-sm text-[#1b1b1b]" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a href="#" onclick="changeLanguage('ba')" class="block px-4 py-2 hover:bg-[#FFC107]">Bosnian</a>
+              </li>
+              <li>
+                <a href="#" onclick="changeLanguage('de')" class="block px-4 py-2 hover:bg-[#FFC107]">Deutsch</a>
+              </li>
+              <li>
+                <a href="#" onclick="changeLanguage('en')" class="block px-4 py-2 hover:bg-[#FFC107]">English</a>
+              </li>
+              <li>
+                <a href="#" onclick="changeLanguage('tr')" class="block px-4 py-2 hover:bg-[#FFC107]">Türkçe</a>
+              </li>
+            </ul>
+        </div>
+        
+  </nav>
+  
+
+      <section id="hero" class="body-font pt-20 md:h-screen mt-4 md:mt-0 flex flex-col items-center justify-center bg-transparent">
+          <div class="flex flex-col md:items-center md:text-center mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font text-6xl md:text-8xl text-center select-none font-medium text-white logo">VISUALIS
+            </h1>
+            <span id="typewriter" class="cursor text text-xl lg:text-4xl"></span>
+            <p  data-i18n="hero_usluge" class="leading-relaxed font-semibold lg:text-xl w-5/6 lg:w-1/2 text-md text-[#FFC107]"> <br></p>
+                <p  data-i18n="hero_text" class="mb-8 leading-relaxed font-semibold lg:text-lg w-5/6 lg:w-1/2 text-md">
+                  <span  class="text-white font-medium lg:pt-0 pt-2"></span>
+
+                </p>
+            <div class="flex justify-center">
+              <a class="" href="#kontakt">
+                <button class="before:ease relative cursor-pointer h-12 w-40 overflow-hidden border border-[#FFC107] text-white shadow-2xl transition-all before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center before:-translate-x-20 before:rotate-45 before:bg-[#FFC107] hover:text-[#1b1b1d] after:text-[#1b1b1d] before:duration-300 hover:shadow-[#FFC107] hover:before:h-64 hover:before:-translate-y-32">
+                  <span data-i18n="cntct-btn" class="relative z-10"></span>
+                </button>
+              </a>                
+            </div>
+          </div>
+          <div id="particles-js" class="absolute inset-0 opacity-1/2"></div>
+      </section>
+
+      <div class="relative w-full">
+        <div class="absolute inset-x-0 -top-10 md:-top-20 flex justify-center">
+          <p data-i18n="slogan" class="text-white text-xl md:text-3xl text-center"></p>
+        </div>
+      </div>
+<!-- component -->
+    <section >
+        <div class="bg-transparent items-center justify-center">
+            <h1 data-i18n="services_title" class="title-font text-3xl md:text-6xl text-center select-none py-6 font-regular text-white"></h1>
+            <div class="container mx-auto p-4">
+              <div class="grid grid-cols-1 w-5/6 bg-transparent lg:w-2/3 mx-auto lg:grid-cols-2 gap-4 mb-4">
+                <!-- Replace this with your grid items -->
+                <div class="bg-[#1b1b1d] rounded-lg text-white border border-[#FFC107] p-4">
+                  <img src="printmedia.webp" alt="Placeholder Image" class="w-full h-48 rounded-md object-cover">
+                  <div class="px-1 py-4">
+                    <div class="font-bold text-xl mb-2 " data-i18n="print"></div>
+                    <p class="text-white text-base" data-i18n="print_text">
+                        
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-[#1b1b1d] rounded-lg text-white border border-[#FFC107] p-4">
+                  <img src="71977.webp" alt="Placeholder Image" class="w-full h-48 rounded-md object-cover">
+                  <div class="px-1 py-4">
+                    <div class="font-bold text-xl mb-2" data-i18n="web"></div>
+                    <p class="text-white text-base"data-i18n="web_tekst">
+                        
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-[#1b1b1d] rounded-lg text-white border border-[#FFC107] p-4">
+                  <img src="book cover design.webp" alt="Placeholder Image" class="w-full h-48 rounded-md object-cover">
+                  <div class="px-1 py-4">
+                    <div class="font-bold text-xl mb-2"data-i18n="book"></div>
+                    <p class="text-white text-base" data-i18n="book_text">
+                        
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-[#1b1b1d] rounded-lg text-white border border-[#FFC107] p-4">
+                  <img src="49854.webp" alt="Placeholder Image" class="w-full h-48 rounded-md object-cover">
+                  <div class="px-1 py-4">
+                    <div class="font-bold text-xl mb-2" data-i18n="video"></div>
+                    <p class="text-white text-base" data-i18n="video_text">
+                                                
+                    </p>
+                  </div>
+                </div>
+                <!-- Add more items as needed -->
+              </div>
+            </div>
+          </div>
+    </section>
+
+      <section>
+        <h1  class="title-font text-3xl md:text-6xl text-center select-none py-4 mb-4 font-regular text-white" data-i18n="gallery"></h1>
+        <section class="w-full mx-auto relative p-6">            
+            <!-- component -->
+<!-- This is an example component -->
+<div class="max-w-2xl mx-auto">
+
+	<div id="default-carousel" class="relative" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                <img src="10.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                <img src="15.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="2.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="3.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                <img src="4.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="5.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="6.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                <img src="7.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="8.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="9.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                <img src="1.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                <img src="13.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="14.webp" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="3"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="4"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="5"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="6"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="7"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="8"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="9"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="10"></button>
+            <button type="button" class="md:w-3 md:h-3 h-2 w-2 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="11"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-[#FFC107]/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-[#FFC107]  group-focus:outline-none">
+                <svg class="w-5 h-5 text-[#1b1b1b] sm:w-6 sm:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span class="hidden">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-[#FFC107]/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-[#FFC107] group-focus:outline-none">
+                <svg class="w-5 h-5 text-[#1b1b1b] sm:w-6 sm:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="hidden">Next</span>
+            </span>
+        </button>
+    </div>
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+</div>
+        </section>
+    </section>
+
+    <!-- <section id="kontakt" class="text-white body-font relative">
+        <form class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1  class="title-font text-3xl md:text-6xl text-center select-none py-4 mb-4 font-regular text-white">KONTAKT</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-base" data-i18n="kontakt_text"></p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-white" data-i18n="name"></label>
+                  <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-white">Email</label>
+                  <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-white" data-i18n="message"></label>
+                  <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <button type="submit" class="before:ease relative cursor-pointer h-12 w-40 overflow-hidden border border-[#FFC107] text-white shadow-2xl transition-all before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center before:-translate-x-20 before:rotate-45 before:bg-[#FFC107] hover:text-[#1b1b1d] after:text-[#1b1b1d] before:duration-300 hover:shadow-[#FFC107] hover:before:h-64 hover:before:-translate-y-32">
+                    <span class="relative z-10" data-i18n="send">Senden</span>
+                  </button>
+              </div>
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                <a class="text-[#FFC107]">visualis.digitalservices@gmail.com</a>
+                <p class="leading-normal my-5" data-i18n="vlasnik">
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section> -->
+
+      
+
+      <section id="kontakt" class="w-full py-12 mt-8 bg-transparent px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1 data-i18n="cntct-txt" class="title-font text-3xl md:text-6xl text-center select-none py-4 mb-4 font-regular text-white"></h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-base" data-i18n="kontakt_text"></p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <!-- Left Half: Contact Info -->
+          <div class="flex flex-col justify-start space-y-6 lg:col-span-1">
+            <div class="space-y-4 text-left text-lg">
+              <div class="flex flex-col space-y-6">
+                <!-- Row 1 -->
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-[#FFC107] rounded-full flex items-center justify-center">
+                    <!-- Example Icon: Replace with your desired icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path></svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-white">Email</h3>
+                    <p class="text-white text-[1rem] md:text-lg">visualis.digitalservices@gmail.com</p>
+                  </div>
+                </div>
+              
+                <!-- Row 2 -->
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-[#FFC107] rounded-full flex items-center justify-center">
+                    <!-- Example Icon: Replace with your desired icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"></path></svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-white" data-i18n="telefon"></h3>
+                    <p class="text-white text-[1rem] md:text-lg">0160-5701590</p>
+                  </div>
+                </div>
+              
+                <!-- Row 3 -->
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-[#FFC107] rounded-full flex items-center justify-center">
+                    <!-- Example Icon: Replace with your desired icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path></svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-white" data-i18n="vlasnik"></h3>
+                    <p class="text-white text-[1rem] md:text-lg">Adnan Alajbegovic</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+      
+          <!-- Right Half: Contact Form -->
+          <div class="flex flex-col justify-start space-y-6 lg:col-span-1">
+            <form  action="https://formsubmit.co/visualis.digitalservices@gmail.com" method="POST" class="space-y-4">
+              <input type="hidden" name="_subject" value="New website message">
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_next" value="https://visualis-digitalservices.com/success">
+              <input type="hidden" name="_template" value="basic">
+              <div>
+                <label for="name" data-i18n="name" class="block text-xl text-left font-medium text-white"></label>
+                <input type="text"  id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+              </div>
+              <div>
+                <label for="email" class="block text-xl text-left font-medium text-white">Email</label>
+                <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+              </div>
+              <div>
+                <label for="message" data-i18n="message" class="block text-xl text-left font-medium text-white"></label>
+                <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+              </div>
+              <div>
+                <button type="submit" class="before:ease relative cursor-pointer h-12 w-40 overflow-hidden border border-[#FFC107] text-white shadow-2xl transition-all before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center before:-translate-x-20 before:rotate-45 before:bg-[#FFC107] hover:text-[#1b1b1d] after:text-[#1b1b1d] before:duration-300 hover:shadow-[#FFC107] hover:before:h-64 hover:before:-translate-y-32">
+                  <span class="relative z-10" data-i18n="send">Senden</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      
+
+
+      <footer class="text-white body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex flex-row gap-2 title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <div class="w-14"><img src="LOGO VISUAL.png" alt=""></div>
+            <div class="text-2xl font-bold logo-nav select-none">VISUALIS</div>
+          </a>
+          <p  data-i18n="footer_text" class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        </p>
+        </div>
+      </footer>
+
+      <script>
+      const words = ["DESIGN SERVICES"];
+      let index = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const speed = 120;
+      const element = document.getElementById("typewriter");
+      
+      function typeEffect() {
+          const currentWord = words[index];
+          if (isDeleting) {
+              charIndex--;
+          } else {
+              charIndex++;
+          }
+          
+          element.textContent = currentWord.substring(0, charIndex);
+          
+          if (!isDeleting && charIndex === currentWord.length) {
+              isDeleting = true;
+              setTimeout(typeEffect, 1000);
+          } else if (isDeleting && charIndex === 0) {
+              isDeleting = false;
+              index = (index + 1) % words.length;
+              setTimeout(typeEffect, 500);
+          } else {
+              setTimeout(typeEffect, speed);
+          }
+      }
+      
+      typeEffect();
+  </script>
+
+    <script>
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('carousel');
+            carousel.scrollBy({ left: direction * 200, behavior: 'smooth' });
+        }
+
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 65 }, 
+                opacity: { value: 0.7 }, 
+                size: { value: 2.5 }, 
+                color: { value: "#ffc107" },
+                line_linked: { 
+                enable: true, 
+                opacity: 0.5 
+                }
+            }
+            });
+
+
+            function updateContent(langData) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.innerHTML = langData[key];
+    });
+}
+
+function setLanguagePreference(lang) {
+    localStorage.setItem('language', lang);
+    location.reload();
+}
+
+async function fetchLanguageData(lang) {
+    const response = await fetch(`${lang}.json`);
+    return response.json();
+}
+
+async function changeLanguage(lang) {
+    await setLanguagePreference(lang);
+    
+    const langData = await fetchLanguageData(lang);
+    updateContent(langData);
+}
+
+window.addEventListener('DOMContentLoaded', async () => {
+    const userPreferredLanguage = localStorage.getItem('language') || 'de';
+    const langData = await fetchLanguageData(userPreferredLanguage);
+    updateContent(langData);
+});
+    </script>
+</body>
+</html>
