@@ -59,3 +59,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
 });
+
+## 🆕 Redesign (v2)
+
+A redesigned, animation-rich version lives in [`v2/`](v2/index.html) (plain HTML/CSS/JS, no frameworks). It reuses the root images and `*.json` language files, so all content and the 4-language switcher are unchanged. The original site (`index.html`) is untouched.
