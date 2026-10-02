@@ -10,7 +10,18 @@
   const cache = {};
   let current = store.get('language');
   if (!langs.includes(current)) current = 'de';
-  const load = async l => cache[l] || (cache[l] = await (await fetch(`../${l}.json`)).json());
+  const fetchJSON = async (l, tries = 3) => {
+    for (let i = 0; i < tries; i++) {
+      try { const r = await fetch(`../${l}.json`, { cache: 'force-cache' }); if (r.ok) return await r.json(); } catch {}
+      await new Promise(r => setTimeout(r, 300 * (i + 1)));
+    }
+    return null;
+  };
+  const load = async l => {
+    if (cache[l]) return cache[l];
+    const d = await fetchJSON(l) || (l !== 'en' && await fetchJSON('en')) || {};
+    return d.hero_text ? (cache[l] = d) : d;
+  };
 
   function applyText(d) {
     $$('[data-i18n]').forEach(el => { const v = d[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
@@ -32,10 +43,10 @@
     const d = await load(l);
     const main = $('main') || document.body;
     if (animate && !reduce) {
-      main.style.transition = 'opacity .25s, filter .25s'; main.style.opacity = 0; main.style.filter = 'blur(8px)';
+      main.style.transition = 'opacity .25s'; main.style.opacity = 0;
       await new Promise(r => setTimeout(r, 260));
       applyText(d);
-      main.style.opacity = 1; main.style.filter = 'none';
+      main.style.opacity = 1;
     } else applyText(d);
     revealSlogan();
   }
@@ -91,12 +102,14 @@
     sections.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * .4) cur = s.id; });
     links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
     revealSlogan();
-    $$('.parallax').forEach(el => { el.style.transform = `translateY(${scrollY * (+el.dataset.speed || .1)}px)`; });
   }
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  let ticking = false;
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; onScroll(); }); } }, { passive: true });
+  addEventListener('resize', onScroll); onScroll();
 
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0, rootMargin: '0px 0px -8% 0px' });
   $$('.reveal').forEach(el => io.observe(el));
+  setTimeout(() => $$('.reveal:not(.in)').forEach(el => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }), 2500);
 
   /* ---------- mobile menu + language dropdown ---------- */
   const burger = $('.burger'), menu = $('.links');
@@ -138,11 +151,12 @@
   if (cv && !reduce) {
     const ctx = cv.getContext('2d'); let W, H, pts = [], mouse = { x: -999, y: -999 };
     const size = () => { const r = cv.parentElement.getBoundingClientRect(); const dpr = Math.min(devicePixelRatio || 1, 2); W = cv.width = r.width * dpr; H = cv.height = r.height * dpr; ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.scale(dpr, dpr); W /= dpr; H /= dpr;
-      const n = Math.round(Math.min(90, W * H / 14000)); pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .45, vy: (Math.random() - .5) * .45, r: Math.random() * 1.8 + .6 })); };
+      const n = Math.round(Math.min(innerWidth < 760 ? 38 : 90, W * H / 14000)); pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .45, vy: (Math.random() - .5) * .45, r: Math.random() * 1.8 + .6 })); };
     size(); addEventListener('resize', size);
     cv.parentElement.addEventListener('mousemove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
     cv.parentElement.addEventListener('mouseleave', () => { mouse.x = mouse.y = -999; });
     let visible = true; new IntersectionObserver(e => visible = e[0].isIntersecting).observe(cv);
+    document.addEventListener('visibilitychange', () => visible = !document.hidden);
     (function draw() {
       requestAnimationFrame(draw); if (!visible) return;
       ctx.clearRect(0, 0, W, H);
